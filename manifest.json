@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Google Stitch Image Paste",
+  "version": "1.2",
+  "description": "An extension to let users paste images in Google Stitch.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://stitch.withgoogle.com/*",
+    "https://app-companion-430619.appspot.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://stitch.withgoogle.com/*", "https://app-companion-430619.appspot.com/*"],
+      "js": ["content-script.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["iframe-script.js"],
+      "matches": ["https://stitch.withgoogle.com/*", "https://app-companion-430619.appspot.com/*"]
+    }
+  ]
+} 
