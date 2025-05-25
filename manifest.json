@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Google Stitch Image Paste",
-  "version": "1.2",
+  "version": "1.0",
   "description": "An extension to let users paste images in Google Stitch.",
   "permissions": [
     "activeTab",
